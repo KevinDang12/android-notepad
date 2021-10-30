@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:background="@color/light_grey">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.example.basicnotepad.NotePadArea
+                android:gravity="top"
+                android:id="@+id/notepad_input"
+                android:text="Enter your notes here!"
+                android:paddingTop="50dp"
+                android:paddingLeft="50dp"
+                android:layout_marginBottom="0dp"
+                android:textColor="@color/dark_grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:background="@color/white"/>
+
+            <com.example.basicnotepad.NotePadTornPage
+                android:id="@+id/notepad_torn"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/p1"/>
+
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>
